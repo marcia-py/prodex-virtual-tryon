@@ -290,10 +290,9 @@
                     const clothingBase64 = await fileToBase64(clothingFile);
 
                     // Calling Hugging Face API
-                    const response = await fetch('https://api-inference.huggingface.co/models/yisol/IDM-VTON', {
+                    const response = await fetch('https://prodex-backend-1ww1.onrender.com/tryon', {
                         method: 'POST',
                         headers: {
-                            'Authorization': 'Bearer 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',
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
