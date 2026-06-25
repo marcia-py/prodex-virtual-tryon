@@ -305,11 +305,9 @@
 
                     const data = await response.json();
 
-                    document.getElementById('resultImage').src = data.image;
-
                     // Show result
                     document.getElementById('loading').style.display = 'none';
-                    document.getElementById('resultImage').src = resultUrl;
+                    document.getElementById('resultImage').src = data.image;
                     document.getElementById('result').style.display = 'block';
 
                 } catch (error) {
