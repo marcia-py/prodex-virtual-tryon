@@ -217,6 +217,19 @@
             </label>
         </div>
 
+        <div class="upload-section">
+            <h3>🧠 O que está a experimentar?</h3>
+            <p>Escolhe o tipo de peça (melhora o resultado da IA)</p>
+
+            <select id="clothingType" style="padding:10px; border-radius:8px; width:100%;">
+                <option value="auto">Auto-detectar</option>
+                <option value="top">Camisola / Casaco (upper body)</option>
+                <option value="dress">Vestido</option>
+                <option value="pants">Calças</option>
+                <option value="skirt">Saia</option>
+            </select>
+        </div>
+
         <button class="try-on-btn" id="tryOnBtn" disabled>
             ✨ Experimentar Look
         </button>
@@ -298,7 +311,8 @@
                         body: JSON.stringify({
                             inputs: {
                                 person_image: personBase64,
-                                cloth_image: clothingBase64
+                                cloth_image: clothingBase64,
+                                type: document.getElementById("clothingType").value
                             }
                         })
                     });
