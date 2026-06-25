@@ -303,8 +303,9 @@
                         })
                     });
 
-                    const blob = await response.blob();
-                    const resultUrl = URL.createObjectURL(blob);
+                    const data = await response.json();
+
+                    document.getElementById('resultImage').src = data.image;
 
                     // Show result
                     document.getElementById('loading').style.display = 'none';
